@@ -144,6 +144,18 @@ p {
   font-style: normal;
 }
 
+#link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin-top: 25px;
+  font-family: "Tajawal", serif;
+  font-weight: 500;
+  font-style: normal;
+  transition: 1s;
+
+}
+
 
 
 

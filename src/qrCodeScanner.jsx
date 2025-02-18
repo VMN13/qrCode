@@ -3,7 +3,7 @@ import { useState } from 'react';
 import qrcode from './qrCodeScanner.module.css';
 import Header from './Header';
 import Footer from './Footer';
-
+import { Link } from 'react-router-dom';
 export const QrCodeScanner = () => {
   const [scanned, setScanned] = useState(null);
   const scanHandler = (result) => {
@@ -36,7 +36,8 @@ export const QrCodeScanner = () => {
       styles={stylesSettings}
       /> 
     </div>
-   
+    <Link id='link'
+        to='/'>return</Link>
     </div>
      <Footer />
      </>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import Header from './Header';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 const QrCodeGenerator = () => {
 const [value, setValue] = useState('');
 const [result, setResult] = useState('');
@@ -31,15 +32,17 @@ console.log('result: ', result);
       <input 
         className='input' 
         type='text' 
-        placeholder='Введите текст' 
+        placeholder='Enter your text' 
         value={value} 
         onChange={onChangeHandler} />
       <button 
         className='button' 
         type='button' 
         onClick={onClickHandler}>
-          Сгенерировать QR
+          Generatore your QR code
       </button>
+      <Link id='link'
+        to='/'>return</Link>
     </div>
     </div>
     <Footer />
