@@ -1,16 +1,15 @@
-import QrCodeGenerator from './QrCodeGenerator';
 import './App.css';
-import { Layout } from './Layout';
 import Header from './Header';
 import Footer from './Footer';
+import Navigation from './Navigation';
+
 
 function App() {
   return (
     <>
       <Header />
       <div className='app'>
-      <QrCodeGenerator />
-      <Layout />
+      <Navigation />
       </div>
       <Footer />
     </>

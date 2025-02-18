@@ -5,7 +5,7 @@ import { QrCodeScanner } from './qrCodeScanner';
 const Layout = () => {
   return (
     <div>
-      {/* <QrCodeGenerator />  */}
+      <QrCodeGenerator />
       <QrCodeScanner />
     </div>
   )

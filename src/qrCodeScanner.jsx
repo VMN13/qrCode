@@ -1,12 +1,14 @@
 import { Scanner } from '@yudiel/react-qr-scanner';
 import { useState } from 'react';
-export const QrCodeScanner = () => {
+import qrcode from './qrCodeScanner.module.css';
+import Header from './Header';
+import Footer from './Footer';
 
+export const QrCodeScanner = () => {
   const [scanned, setScanned] = useState(null);
   const scanHandler = (result) => {
     setScanned(result[0].rawValue);
   }
-
   console.log(scanned);
 
   const settings = {
@@ -21,7 +23,11 @@ export const QrCodeScanner = () => {
   }
 
   return (
-    <div className='scanner' >
+    <>
+    <Header />
+    <div className='app'>
+    
+    <div className={qrcode.container} >
       <p>{scanned}</p>
       <Scanner
       allowMultiple
@@ -30,5 +36,12 @@ export const QrCodeScanner = () => {
       styles={stylesSettings}
       /> 
     </div>
+   
+    </div>
+     <Footer />
+     </>
   );
 };
+
+
+export default QrCodeScanner

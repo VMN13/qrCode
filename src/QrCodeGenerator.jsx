@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
-
+import Header from './Header';
+import Footer from './Footer';
 const QrCodeGenerator = () => {
 const [value, setValue] = useState('');
 const [result, setResult] = useState('');
@@ -18,6 +19,9 @@ const onChangeHandler = (event) => {
 console.log('result: ', result);
 
   return (
+    <>
+    <Header />
+    <div className='app'>
     <div>
       {result !== '' && (
         <QRCodeSVG  
@@ -37,6 +41,9 @@ console.log('result: ', result);
           Сгенерировать QR
       </button>
     </div>
+    </div>
+    <Footer />
+    </>
   );
 };
 
