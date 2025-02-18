@@ -1,7 +1,10 @@
 export default function Footer() {
   return (
     <div className='footer'>
-      <h1 className='year'>2025 ©<br/>All rights reserved</h1>
+      <h1 className='year'>
+        All rights reserved<br/>
+        2025 ©
+      </h1>
     </div>
-  )
-}
+  );
+};
