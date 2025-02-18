@@ -4,7 +4,7 @@ export const QrCodeScanner = () => {
 
   const [scanned, setScanned] = useState(null);
   const scanHandler = (result) => {
-    console.log(result[0].rawValue);
+    setScanned(result[0].rawValue);
   }
 
   console.log(scanned);
