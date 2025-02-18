@@ -8,6 +8,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  scroll-behavior: smooth;
+  overflow-y: none;
 }
 
 p {
