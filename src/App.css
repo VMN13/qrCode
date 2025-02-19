@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
   scroll-behavior: smooth;
   overflow-y: none;
@@ -20,40 +20,76 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center; 
 }
 
+#navigate {
+  font-family: "Tajawal", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  letter-spacing:  20px;
+}
+
+.description {
+  font-family: "Tajawal", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+  
+}
+
 .link {
+  background-image: url(./img/new.png);
+  display: inline-flex;
   font-family: "Tajawal", serif;
   font-weight: 500;
   font-style: normal;
   text-decoration: none;
   background-color: white;
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 25px;
   border: solid 1px rgb(255, 255, 255);
   border-radius: 20px;
   width: 300px;
+  height: 70px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
 }
 
 .link:hover {
   color: rgb(90, 86, 86);
-  
+  background-color: bisque;
+  transition: 1s;
 }
 
 p {
   font-size: 15px;
+  font-family: "Tajawal", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(255, 255, 255);
 }
 
 .app {
+  color: white;
+  background-image: url(./img/newspaper_.jpg);
+  background-repeat: no-repeat;
   background-color: bisque;
   border-radius: 20px;
   padding: 20px;
   width: 300px;
+  height: 500px;
 }
 
 .header {
+  background-image: url(./img/header.jpg);
+  background-repeat:  no-repeat;
   background-color: bisque;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -72,7 +108,6 @@ p {
   fill: bisque;
   transition: 1s;
 }
-
 
 .input {
   width: 280px;
@@ -128,6 +163,7 @@ p {
 }
 
 .footer {
+  background-image: url(./img/footer.jpg);
   display: flex;
   flex-direction: column;
   margin-top: 20px;
@@ -147,13 +183,12 @@ p {
 #link {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   margin-top: 25px;
   font-family: "Tajawal", serif;
   font-weight: 500;
   font-style: normal;
   transition: 1s;
-
 }
 
 

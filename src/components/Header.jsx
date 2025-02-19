@@ -4,8 +4,8 @@ export default function Header() {
       <h1 className='QRcode'>
         QR Code Generator
       </h1>
-      <p>
-        Scan the QR code to visit Frontend Mentor
+      <p className='description'>
+        Scan the QR code to visit a website
       </p>
     </div>
   );

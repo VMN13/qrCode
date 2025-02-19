@@ -1,8 +1,7 @@
 import './App.css';
-import Header from './Header';
-import Footer from './Footer';
-import Navigation from './Navigation';
-
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       </div>
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default App
