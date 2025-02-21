@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 import { Link } from 'react-router-dom';
-import { GENERATED_DATA } from '../constants.js';
+import { GENERATED_DATA } from './history/constants.js';
 
 const QrCodeGenerator = () => {
 const [value, setValue] = useState('');
@@ -13,7 +13,7 @@ const onClickHandler = (event) => {
       setResult(value);
       setValue('');
 
-      const prevData =  (JSON.parse(localStorage.getItem(GENERATED_DATA))) || '[]';
+      const prevData =  (JSON.parse(localStorage.getItem(GENERATED_DATA))) || [];
       console.log(prevData);
       localStorage.setItem(
         GENERATED_DATA,
@@ -33,6 +33,7 @@ console.log('result: ', result);
   return (
     <>
     <Header />
+
     <div className='app'>
     <div>
       {result !== '' && (
@@ -47,6 +48,7 @@ console.log('result: ', result);
         placeholder='Enter your text' 
         value={value} 
         onChange={onChangeHandler} />
+
       <button 
         tabIndex={2}
         className='button' 
@@ -54,14 +56,15 @@ console.log('result: ', result);
         onClick={onClickHandler}>
           Generatore your QR code
       </button>
+
       <Link
         tabIndex={3}
         id='link'
-        to='/'>return</Link>
+        to='/'>return
+      </Link>
     </div>
     </div>
     <Footer />
-    
     </>
   );
 };

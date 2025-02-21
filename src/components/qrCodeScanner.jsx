@@ -1,11 +1,11 @@
 import { Scanner } from '@yudiel/react-qr-scanner';
 import { useState } from 'react';
-import qrcode from './qrCodeScanner.module.css';
-import Header from './Header';
-import Footer from './Footer';
+import qrcode from './history/qrCodeScanner.module.css';  
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 import { Link } from 'react-router-dom';
-import { SCAN_DATA } from '../constants.js';
-
+import { SCAN_DATA } from './history/constants.js';
+import { useMemo } from 'react';
 export const QrCodeScanner = () => {
   const [scanned, setScanned] = useState(null);
   

@@ -5,8 +5,8 @@ import PageNotFound from './components/pageNotFound';
 import App from './App.jsx'
 import QrCodeGenerator from './components/QrCodeGenerator.jsx';
 import QrCodeScanner from './components/qrCodeScanner.jsx';
-import GenerateHistory from './components/GenerateHistory.jsx';
-import ScanHistory from './components/ScanHistory.jsx';
+import GenerateHistory from './components/history/GenerateHistory.jsx';  
+import ScanHistory from './components/history/ScanHistory.jsx';
 
 
 createRoot(document.getElementById('root')).render(

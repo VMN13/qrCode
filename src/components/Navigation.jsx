@@ -5,11 +5,11 @@ export const Navigation = () => {
   return (
     <nav className="nav">
       <h1 id='navigate'>
-        Navigate
+        Navigate:
       </h1>
-      <Link className='link' to="/qrCodeGenerator">CodeGenerator</Link>
+      <Link className='link' to="/qrCodeGenerator">Code Generator</Link>
       <br />
-      <Link className='link' to={"/qrCodeScanner"}>ScannerGenerator</Link>
+      <Link className='link' to={"/qrCodeScanner"}>Scanner Generator</Link>
       <br />
       <Link className='link' to="/scanHistory">History Scan</Link>
       <br />
@@ -17,6 +17,7 @@ export const Navigation = () => {
     </nav>
 );
 };
+
 
 export default Navigation;
 
