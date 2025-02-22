@@ -3,10 +3,8 @@ import { QRCodeSVG } from "qrcode.react";
 import Header from '../Header';
 import Footer from '../Footer';
 import { Link } from "react-router-dom";
-import { useMemo } from "react";
-export const ScanHistory = () => {
- 
 
+export const ScanHistory = () => {
 
   const data = JSON.parse(localStorage.getItem(SCAN_DATA) || '[]');
   

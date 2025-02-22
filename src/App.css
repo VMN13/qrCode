@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
+body {
+  margin-top: 10px;
+  overflow-y: none;
+  overflow-x: none;
+}
+
 #root {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 3rem;
   text-align: center;
   scroll-behavior: smooth;
   overflow-y: none;
@@ -225,6 +230,13 @@ p {
   border: solid 1px rgb(255, 255, 255);
   background-color: bisque;
   transition: 1s;
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 28s linear infinite;
+  -z-animation: rainbow 18 linear infinite;
+  -o-animation: rainbow 18s linear infinite;
+    animation: rainbow 18s linear infinite;
 }
 
 .input:focus {
