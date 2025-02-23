@@ -5,7 +5,7 @@ import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import { Link } from 'react-router-dom';
 import { SCAN_DATA } from './history/constants.js';
-import { useMemo } from 'react';
+
 export const QrCodeScanner = () => {
   const [scanned, setScanned] = useState(null);
   
