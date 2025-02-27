@@ -1,10 +1,12 @@
-import './App.css';
-import './Appcssphone.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Navigation from './components/Navigation';
+import './styles/App.css';
+import './styles/Appcssphone.css';
+import Header from './html/Header';
+import Footer from './html/Footer';
+import Navigation from './html/Navigation';
+
 
 function App() {
+
   return (
     <>
       <Header />

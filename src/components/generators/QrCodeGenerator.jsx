@@ -1,22 +1,21 @@
 import { useState } from 'react';
 import { QRCodeSVG } from 'qrcode.react';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import Header from '../../html/Header.jsx';
+import Footer from '../../html/Footer.jsx';
 import { Link } from 'react-router-dom';
-import { GENERATED_DATA } from './history/constants.js';
-
+import { GENERATED_DATA } from '../history/constants.js';
+import UseClipboardCopy from  '../hooks/useClipboardCopy.jsx';
 const QrCodeGenerator = () => {
 const [value, setValue] = useState('');
 const [result, setResult] = useState('');
 
-const onClickHandler = (event) => {
-      setResult(value);
-      setValue('');
+const onClickHandler = () => {
+  setResult(value);
+  setValue('');
 
-      const prevData =  (JSON.parse(localStorage.getItem(GENERATED_DATA))) || [];
-      console.log(prevData);
+const prevData =  (JSON.parse(localStorage.getItem(GENERATED_DATA))) || [];
       localStorage.setItem(
-        GENERATED_DATA,
+      GENERATED_DATA,
         JSON.stringify([...prevData, value])
       );
       setResult(value);
@@ -28,19 +27,33 @@ const onChangeHandler = (event) => {
       setResult('');
   };
 
-console.log('result: ', result);
+  const stylesSettings = {
+    container : {
+    marginTop: 30
+    },
+    video: {
+    width: '200px',
+    height: '100%'
+    }
+  }
+
+  const copyToClipboard = UseClipboardCopy();
 
   return (
     <>
     <Header />
-
-    <div className='app'>
-    <div>
+    <div className="app_Two">
+    <div className='container'>
+      <div className='history_generator'>
       {result !== '' && (
         <QRCodeSVG  
           className='qr' 
-          value={result} />
+          value={result}
+          styles={stylesSettings}
+          />
       )}
+      </div>
+      <div className='form_generator'>
       <input 
         tabIndex={1}
         className='input' 
@@ -49,9 +62,11 @@ console.log('result: ', result);
         value={value} 
         onChange={onChangeHandler} />
 
+
+<div className='buttons'>
       <button 
         tabIndex={2}
-        className='button' 
+        className='GeneratoreyourQRcode' 
         type='button' 
         onClick={onClickHandler}>
           Generatore your QR code
@@ -59,9 +74,12 @@ console.log('result: ', result);
 
       <Link
         tabIndex={3}
-        id='link'
-        to='/'>return
+        to='/'>
+        <button id='copy' onClick={() => copyToClipboard(result)}>Copy to Clipboard and return</button>
       </Link>
+      </div>
+
+    </div>
     </div>
     </div>
     <Footer />

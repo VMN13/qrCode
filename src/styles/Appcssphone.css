@@ -1,12 +1,10 @@
-
-
 @media screen and (min-width: 52px) and (max-width: 1200px) {
-  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
 body {
   margin-top: 10px;
-  overflow-y: none;
-  overflow-x: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main {
@@ -56,7 +54,7 @@ body {
 #navigate {
   visibility: hidden;
   border: solid 2px rgb(255, 255, 255);
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   font-family: "Tajawal", serif;
   font-weight: 700;
   font-style: normal;
@@ -70,7 +68,7 @@ body {
 
 .title {
   border: solid 2px rgb(255, 255, 255);
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   font-family: "Tajawal", serif;
   font-weight: 700;
   font-style: normal;
@@ -81,7 +79,6 @@ body {
   padding: 10px;
   width: 280px;
 }
-
 
 .title:hover {
   color: rgb(90, 86, 86);
@@ -106,7 +103,7 @@ body {
 }
 
 .link {
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   display: inline-flex;
   font-family: "Tajawal", serif;
   font-weight: 500;
@@ -143,7 +140,7 @@ p {
 
 .app {
   color: white;
-  background-image: url(./img/newspaper_.jpg);
+  background-image: url(../img/newspaper_.jpg);
   background-repeat: no-repeat;
   background-color: bisque;
   border-radius: 20px;
@@ -155,7 +152,7 @@ p {
 
 .header {
   cursor: pointer;
-  background-image: url(./img/header.jpg);
+  background-image: url(../img/header.jpg);
   background-repeat:  no-repeat;
   background-color: bisque;
   border-radius: 20px;
@@ -174,7 +171,7 @@ p {
   margin-right: 20px;
   display: flex;
   height: 100px;
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   background-color: #626060;
   border-radius: 20px;
   color: rgb(255, 255, 255);
@@ -218,7 +215,7 @@ p {
 }
 
 .input {
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   width: 280px;
   text-align: center;
   font-size: 20px;
@@ -247,7 +244,7 @@ p {
 }
 
 .button {
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   background-color: #626060;
   color: rgb(255, 255, 255);
   width: 300px;
@@ -276,7 +273,7 @@ p {
 }
 
 .footer {
-  background-image: url(./img/footer.jpg);
+  background-image: url(../img/footer.jpg);
   display: flex;
   filter: grayscale(80%);
   flex-direction: column;
@@ -293,7 +290,7 @@ p {
 }
 
 .year {
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   font-family: "Tajawal", serif;
   font-weight: 500;
   font-style: normal;
@@ -318,7 +315,7 @@ p {
 
 
 #link {
-  background-image: url(./img/new.png);
+  background-image: url(../img/new.png);
   display: inline-block;
   text-decoration: none;
   font-size: 20px;
@@ -332,7 +329,7 @@ p {
   border-radius: 30px;
   padding: 5px;
   padding-left: 20px;
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 #link:hover {
@@ -341,4 +338,132 @@ p {
   color: rgb(90, 86, 86);
   border-radius: 30px;
 }
+
+.container {
+  background-image: url(../img/qrCode.jpg);
+  background-repeat: repeat;
+  background-position-x: -120px;
+  background-position-y: 48px;
+  border: solid 1px rgb(255, 255, 255);
+  width: 350px;
+  margin-left: 0px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-behavior: smooth;
+  overflow-y: none;
+  overflow-x: none;
+  margin-top: 5px;
+  transition: 1s;
+  cursor: pointer;
+  background-color: rgb(210, 208, 205);
+  height: 500px;
+  overflow: auto;
+  filter: brightness(75%);
+  z-index: 2;
 }
+
+.qr_scan {
+  width: 300px;
+  height: 300px;
+}
+
+.container_scan {
+  color: white;
+  background-image: url(/src/img/newspaper_.jpg);
+  background-repeat: no-repeat;
+  background-color: bisque;
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  margin-right: 0px;
+  height: 520px;
+  margin-top: 1px;
+  filter: grayscale(80%);
+  z-index: 1;
+}
+
+
+
+.form_generator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 10px;
+}
+
+
+.input {
+  background-image: url(/src/img/new.png);
+  width: 280px;
+  text-align: center;
+  font-size: 10px;
+  padding: 10px;
+  height: 50px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  transition: 1s;
+  font-family: "Tajawal", serif;
+  font-weight: 500;
+  font-style: normal;
+  border: solid 1px rgb(255, 255, 255);
+}
+
+.input[type="text"] {
+  font-size: 25px;
+}
+
+.GeneratoreyourQRcode {
+  background-image: url(/src/img/new.png);
+    font-family: "Tajawal", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    height: 70px;
+    width: 300px;
+    align-items: center;
+    margin-top: 15px;
+    transition: 1s;
+    color: #000000;
+    margin-right: 20px;
+    margin-left: 28px;
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+#copy {
+  background-image: url(/src/img/new.png);
+    font-family: "Tajawal", serif;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    height: 80%;
+    width: 280px;
+    align-items: center;
+    margin-top: 15px;
+    transition: 1s;
+    color: #000000;
+    margin-right: 0px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+
+.buttons {
+  display: flex
+;
+  flex-direction: column;
+  margin-top: -20px;
+}
+
+
+}
+

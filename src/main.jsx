@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PageNotFound from './components/pageNotFound';
+import PageNotFound from './html/pageNotFound.jsx';
 import App from './App.jsx'
-import QrCodeGenerator from './components/QrCodeGenerator.jsx';
-import QrCodeScanner from './components/qrCodeScanner.jsx';
+import QrCodeGenerator from './components/generators/QrCodeGenerator.jsx';
+import QrCodeScanner from './components/generators/qrCodeScanner.jsx';
 import GenerateHistory from './components/history/GenerateHistory.jsx';  
 import ScanHistory from './components/history/ScanHistory.jsx';
 
